@@ -1,1 +1,5 @@
 # hermit
+
+#Authors
+
+* Joshua Muthii
