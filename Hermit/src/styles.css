@@ -1,3 +1,10 @@
 @tailwind base; 
-@tailwind component; 
+@tailwind components; 
 @tailwind utilities;
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
