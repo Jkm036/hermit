@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: space-between;
     width:100vw;
-    height:30%;
+    height:3rem;
     padding:0;
     padding-left:0;
     padding-right:3%;
-    border-bottom: 1px solid #adadad;
-    background-color: #202020;
+    border-bottom: 1px solid #666363;
+    background-color: #030303;
 }
 .dynamicsize{
     height:auto;
@@ -33,7 +33,7 @@ height:auto;
 
 .leftheader p{
     margin-top:3px;
-    font-size:10px;
+    font-size:1rem;
     color:white;
 
 }
@@ -56,8 +56,6 @@ height:auto;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
-
-width:40px;
 }
 
 #profilepic{
@@ -65,15 +63,15 @@ width:40px;
     stroke-width: 2px;
     background-color:#ada8a8;
     border-radius:50%;
-    width:15px;
-    height:15px;
+    width:1.5rem;
+    height:1.5rem;
 }
 .rightheader:hover .profiledropdown{
     border: 1px solid #303030;
     border-radius: 10px;
 }
 #searchbox{
-font-size: 9px;
+font-size: 120%;
 width:100%;
 height: auto;
 padding-left:20px;
@@ -93,7 +91,6 @@ padding-left:20px;
     background-color:#202020;
     border-radius: 1px;
     flex:0;
-    border: 1px solid white;
     overflow:hidden;
     transition:max-height 0.3s;
 }
