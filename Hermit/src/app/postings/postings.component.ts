@@ -7,5 +7,5 @@ import { PostingService } from '../services/posting.service';
   styleUrls: ['./postings.component.css']
 })
 export class PostingsComponent {
-
+  
 }
