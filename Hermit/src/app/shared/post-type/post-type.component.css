@@ -4,6 +4,15 @@
     padding: 0;
   }
 
-post-size {
-  max-width: 20rem;
+p {
+  color: white;
+  word-break: break-word
+}
+
+a {
+  color: white
+}
+
+h1 {
+  color: white
 }

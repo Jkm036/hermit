@@ -7,40 +7,36 @@ export class PostingService {
 
   constructor() { }
 
-  likes = 0
-  likeFill = 'none'
-  dislikeFill = 'none'
-  fill = 'none'
+  likes = 5
+  likeFill = 'white'
+  dislikeFill = 'white'
+  fill = 'white'
 
   like() {
-    if (this.likeFill === 'none') {
-      if (this.dislikeFill === 'red') {
-        this.dislikeFill = 'none'
-      }
+    if (this.dislikeFill === '#ff051a') {
+      this.dislikeFill = 'white'
       this.likes += 1
-      this.likeFill = 'red'
+    }
+    else if (this.likeFill === 'white') {
+      this.likes += 1
+      this.likeFill = '#05ff65'
     } else {
-      if (this.likes > 0) {
         this.likes -= 1
-        this.likeFill = 'none'
-      }
+        this.likeFill = 'white'
     }
   }
 
   dislike() {
-    if (this.likes > 0 && this.dislikeFill === 'none') {
-      if (this.likeFill === 'red') {
-        this.likeFill = 'none'
-      }
+    if (this.likeFill === '#05ff65') {
+      this.likeFill = 'white'
       this.likes -= 1
-      if (this.likes === 0) {
-        this.dislikeFill ='none'
-      } else this.dislikeFill = 'red'
+    }
+    else if  (this.dislikeFill === 'white') {
+      this.likes -= 1
+      this.dislikeFill = '#ff051a'
     } else {
-      if (this.likes != 0) {
-        this.likes += 1
-      }
-      this.dislikeFill = 'none'
+      this.likes += 1
+      this.dislikeFill = 'white'
     }
   }
 }
