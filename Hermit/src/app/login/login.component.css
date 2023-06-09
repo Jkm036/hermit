@@ -10,6 +10,9 @@
     background-color: #9ABD9A;
   }
   
+  .btn-close:hover {
+    background-color: gray;
+  }
    button:hover {
     color: white;
     background-color: #607660;
