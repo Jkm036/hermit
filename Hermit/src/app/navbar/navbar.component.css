@@ -66,7 +66,7 @@ justify-content: space-evenly;
     width:1.5rem;
     height:1.5rem;
 }
-.rightheader:hover .profiledropdown{
+.profiledropdown:hover {
     border: 1px solid #303030;
     border-radius: 10px;
 }

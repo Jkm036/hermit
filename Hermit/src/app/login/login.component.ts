@@ -9,6 +9,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 export class LoginComponent{
   title='bootstrap login';
   loginForm!: FormGroup;
+  showLoginForm = false;
   constructor(){}
 
   ngOnInit(): void {
@@ -25,5 +26,8 @@ export class LoginComponent{
   }
   loginFormSubmit(): void {
     console.log(this.loginForm.value);
+  }
+  toggle() {
+    this.showLoginForm = !this.showLoginForm;
   }
 }

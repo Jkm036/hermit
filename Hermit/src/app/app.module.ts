@@ -7,9 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostingsComponent } from './postings/postings.component';
 import { SharedModule } from './shared/shared.module';
-import {MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,11 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    MatDialogModule,
-    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
