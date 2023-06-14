@@ -1,142 +1,157 @@
-
-.header{
-    position:relative;
+.header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: auto;
-    height:3rem;
-    padding:0;
-    padding-left:0;
-    padding-right:3%;
+    height: 3rem;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 3%;
     border-bottom: 1px solid #666363;
-    background-color: #141b2e;
-}
-.dynamicsize{
-    height:auto;
-    width:auto;
-}
-.middleheader{
-   flex:1;
-   height:auto;
-   padding-bottom:5px;
-}
-.leftheader{
-display:flex;
-padding-left:3px;
-flex-direction: row;
-justify-content: left;
-align-items: center;
-flex:1;
-height:auto;
+    background-color: #151b3e;
 }
 
-.leftheader p{
-    margin-top:3px;
-    font-size:1rem;
-    color:white;
+.dynamicsize {
+    height: auto;
+    width: auto;
+}
+
+.middleheader {
+    flex: 1;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.leftheader {
+    display: flex;
+    padding-left: 3px;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex: 1;
+    height: auto;
+}
+
+.leftheader p {
+    margin-top: 3px;
+    font-size: 1rem;
+    color: white;
 
 }
-.homediv{
+
+.homediv {
     margin-left: 25px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.rightheader{
-display:flex;
-flex-direction: row;
-justify-content: right;
-flex:1;
-height:auto;
+.rightheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    flex: 1;
+    height: auto;
 }
 
-.profiledropdown{
-display: flex;
-align-items: center;
-justify-content: space-evenly;
+.profiledropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-#profilepic{
-    stroke:black;
+#profilepic {
+    stroke: black;
     stroke-width: 2px;
-    background-color:#ada8a8;
-    border-radius:50%;
-    width:1.5rem;
-    height:1.5rem;
+    background-color: #ada8a8;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
 }
+
 .profiledropdown:hover {
     border: 1px solid #303030;
     border-radius: 10px;
 }
-#searchbox{
-font-size: 120%;
-width:100%;
-height: auto;
-padding-left:20px;
-}
-#searchbox:focus{
-    outline:1px solid #ada8a8;
-}
-.submenu{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    position:absolute;
-    top:110%;
-    right:1%;
-    width:150px;
-    max-height: 0px;
-    background-color:#202020;
-    border-radius: 1px;
-    flex:0;
-    overflow:hidden;
-    transition:max-height 0.3s;
+
+#searchbox {
+    font-size: 120%;
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
 }
 
-.submenu.openmenu{
-    max-height:250px;
+#searchbox:focus {
+    outline: 1px solid #ada8a8;
 }
-.menuitemlabel{
+
+.submenu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 110%;
+    right: 1%;
+    width: 150px;
+    max-height: 0px;
+    background-color: #202020;
+    border-radius: 1px;
+    flex: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.submenu.openmenu {
+    max-height: 250px;
+}
+
+.menuitemlabel {
     font-size: 10px;
 }
-.menuheader{
-    padding-left:5%;
+
+.menuheader {
+    padding-left: 5%;
     font-size: 10px;
-    text-align:start;
-    
+    text-align: start;
+
 }
-.menuheader p{
+
+.menuheader p {
     color: darkgray
 }
-.menusection{
-    display:flex;
+
+.menusection {
+    display: flex;
     flex-direction: column;
-    width:100%;
-    background-color: #202020 ;
-}
-.menuitem{
-    display:flex;
-    align-items: center;
-    position:relative;
-    flex-direction: row;
-    width:100%;
-    height: 20px;
-    border-radius:1px;
-    padding-left: 5%;
-}
-.menuitem p,svg{
-    color:white;
-    stroke:white;
-    margin: 0 2px;
-}
-.menuitem:hover{
-    background-color: #303030;
-}
-.menusection hr{
-    width:95%;
-    margin-left:2.5%;
-    border-top: 1px solid #303030;
+    width: 100%;
+    background-color: #202020;
 }
 
+.menuitem {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    height: 20px;
+    border-radius: 1px;
+    padding-left: 5%;
+}
+
+.menuitem p,
+svg {
+    color: white;
+    stroke: white;
+    margin: 0 2px;
+}
+
+.menuitem:hover {
+    background-color: #303030;
+}
+
+.menusection hr {
+    width: 95%;
+    margin-left: 2.5%;
+    border-top: 1px solid #303030;
+}
