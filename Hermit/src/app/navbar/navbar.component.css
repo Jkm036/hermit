@@ -4,13 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:99.3vw;
+    width: auto;
     height:3rem;
     padding:0;
     padding-left:0;
     padding-right:3%;
     border-bottom: 1px solid #666363;
-    background-color: #111a24;
+    background-color: #141b2e;
 }
 .dynamicsize{
     height:auto;
@@ -66,7 +66,7 @@ justify-content: space-evenly;
     width:1.5rem;
     height:1.5rem;
 }
-.rightheader:hover .profiledropdown{
+.profiledropdown:hover {
     border: 1px solid #303030;
     border-radius: 10px;
 }

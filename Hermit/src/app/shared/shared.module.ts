@@ -4,7 +4,7 @@ import { PostTypeComponent } from './post-type/post-type.component';
 
 @NgModule({
   declarations: [
-    PostTypeComponent
+    PostTypeComponent,
   ],
   imports: [
     CommonModule
@@ -13,3 +13,4 @@ import { PostTypeComponent } from './post-type/post-type.component';
   ]
 })
 export class SharedModule { }
+ 
