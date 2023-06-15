@@ -1,11 +1,4 @@
-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto;
-}
 #mainContent{
-    margin-top:6rem;
     display: flex;
     flex-direction:row;
     justify-content: center;

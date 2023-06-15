@@ -1,8 +1,7 @@
-<navbar  (toggleLeftSubMenu)="toggleLSM()">
-    <app-login></app-login>
+<navbar (toggleLeftSubMenu)="toggleLSM()">
+  <app-login backgroundcolor="#ff33cc"></app-login>
 </navbar>
-<sidemenu [sideMenuOpen]="sideMenuOpen" ></sidemenu>
-<div id ="mainContent">
-   
-    <app-postings></app-postings>
+<sidemenu [sideMenuOpen]="sideMenuOpen"></sidemenu>
+<div id="mainContent" class="items-center mt-20 absolute w-full">
+  <app-postings></app-postings>
 </div>
