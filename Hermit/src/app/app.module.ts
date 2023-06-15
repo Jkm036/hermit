@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PostingsComponent } from './postings/postings.component';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SidemenuComponent } from './sidemenu/sidemenu.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     NavbarComponent,
     PostingsComponent,
+    SidemenuComponent,
   ],
   imports: [
     BrowserModule,

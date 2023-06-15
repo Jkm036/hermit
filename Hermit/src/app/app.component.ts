@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hermit';
+  sideMenuOpen=true;
+  toggleLSM(){
+    this.sideMenuOpen=!this.sideMenuOpen;
+  }
 }

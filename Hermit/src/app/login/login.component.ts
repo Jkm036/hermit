@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input} from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
@@ -11,7 +11,7 @@ export class LoginComponent{
   loginForm!: FormGroup;
   showLoginForm = false;
   constructor(){}
-
+  @Input('backgroundcolor') backgroundcolor:String='#66ff99';
   ngOnInit(): void {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),

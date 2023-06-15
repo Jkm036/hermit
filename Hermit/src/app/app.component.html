@@ -1,4 +1,8 @@
-<navbar>
+<navbar  (toggleLeftSubMenu)="toggleLSM()">
     <app-login></app-login>
 </navbar>
-<app-postings></app-postings>
+<sidemenu [sideMenuOpen]="sideMenuOpen" ></sidemenu>
+<div id ="mainContent">
+   
+    <app-postings></app-postings>
+</div>
