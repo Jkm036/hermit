@@ -1,7 +1,7 @@
 <div
   class="border-s border-pink-400 bg-[#151b3e] w-full max-w-2xl h-[30rem] max-h-[100rem] hover:bg-[#151b3e] items-center overflow-y-clip overflow-x-clip top-0 bottom-0 left-0 right-0 m-auto mb-5 mt-2 break-all rounded-lg shadow-2xl">
   <div class="flex flex-row item" id="post">
-    <div class="flex-col m-3" id = "content">
+    <div class="flex-col m-3">
       <button (click)="postingService.like()">
         <svg xmlns="http://www.w3.org/2000/svg" [attr.fill]="postingService.likeFill" viewBox="0 0 24 24"
           stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -18,12 +18,12 @@
         </svg>
       </button>
     </div>
-    <div class="flex-col" id = "content2">
+    <div class="flex-col">
       <h1 class="text-2xl">
         <strong><a href="">Andy is quitting</a></strong>
       </h1>
       <a href="">
-        <div class="flex items-center my-1" id = "content3">
+        <div class="flex items-center my-1">
           <svg xmlns="http://www.w3.org/2000/svg" fill="yellow" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -35,7 +35,7 @@
       <a class="hover:underline" href="">Community</a>
       <hr class="bg-red-800" />
       <a href="">
-        <div class="my-3 mr-3 max-h-[100rem] max-w-[120rem]" id = "content4">
+        <div class="my-3 mr-3 max-h-[100rem] max-w-[120rem]" id = "content">
           <p class="whitespace-pre-line">
             <ng-content></ng-content>
           </p>
