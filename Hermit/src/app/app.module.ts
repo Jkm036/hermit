@@ -7,30 +7,22 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostingsComponent } from './postings/postings.component';
 import { SharedModule } from './shared/shared.module';
-import {MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { SidemenuComponent } from './sidemenu/sidemenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    PostingsComponent
+    PostingsComponent,
+    SidemenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     SharedModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    NgbModule,
-    MatDialogModule, MatInputModule, MatButtonModule, MatCardModule, MatFormFieldModule]
-  ,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

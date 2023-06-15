@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'navbar',
@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
   }
 })
 export class NavbarComponent {
+  @Output('toggleLeftSubMenu') toggleLSM = new EventEmitter();
  menuOpen:boolean=false;
-  
+ 
   closeSubMenu(){
     this.menuOpen=false;
   }
@@ -19,4 +20,8 @@ export class NavbarComponent {
   this.menuOpen=!this.menuOpen;
   console.log(this.menuOpen);
  }
+ toggleLeftSubMenu(){
+this.toggleLSM.emit();
+ }
+
 }

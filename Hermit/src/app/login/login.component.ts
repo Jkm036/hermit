@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -9,11 +8,13 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
-  title='bootstrap login';
-  loginForm!: FormGroup;
-  public email: string = "";
-  public password: string = "";
+export class LoginComponent {
 
-  constructor(private dialog: MatDialog, private router: Router){}
+  showLoginForm: boolean = false;
+  constructor() { }
+
+  @Input('backgroundcolor') backgroundcolor: String = '#66ff99';
+  toggle() {
+    this.showLoginForm = !this.showLoginForm;
+  }
 }

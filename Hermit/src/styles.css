@@ -1,13 +1,22 @@
-@tailwind base; 
-@tailwind components; 
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 body {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    width: auto;
     margin: 0 auto;
-    background-color: #222831;
+    background-color: #10172a;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
