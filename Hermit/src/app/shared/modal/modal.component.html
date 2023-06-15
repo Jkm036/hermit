@@ -1,0 +1,136 @@
+<form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" [formGroup]="loginForm" (ngSubmit)="(loginFormSubmit)">
+    <ng-container *ngIf="!register">
+        <div class="mb-3">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+            <input formControlName="email" [class.is-invalid]="
+                        emailField.touched && emailField.dirty && emailField.invalid
+                      " type="email"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            <div *ngIf="
+                        emailField.touched && emailField.dirty && emailField.hasError('required')
+                      " class="text-red-500 text-xs italic">
+                Please provide an Email.
+            </div>
+            <div *ngIf="emailField.touched && emailField.dirty && emailField.hasError('email')"
+                class="text-red-500 text-xs italic">
+                Email address is not valid
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+            <input formControlName="password" [class.is-invalid]="
+                        passwordField.touched && passwordField.dirty && passwordField.invalid
+                      " type="password"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            <div *ngIf="
+                        passwordField.touched && passwordField.dirty &&
+                        passwordField.hasError('required')
+                      " class="text-red-500 text-xs italic">
+                Please provide a Password.
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="register">
+        <div class="mb-3">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+            <input formControlName="email" [class.is-invalid]="
+                        emailField.touched && emailField.dirty && emailField.invalid
+                      " type="email"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            <div *ngIf="
+                        emailField.touched && emailField.dirty && emailField.hasError('required')
+                      " class="text-red-500 text-xs italic">
+                Please provide an Email.
+            </div>
+            <div *ngIf="emailField.touched && emailField.dirty && emailField.hasError('email')"
+                class="text-red-500 text-xs italic z-10">
+                Email address is not valid
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="float-left">
+                <label class="block text-gray-700 text-sm font-bold mb-2">First Name</label>
+                <input formControlName="first" [class.is-invalid]="
+            firstField.touched && firstField.dirty && firstField.invalid
+                      " type="text"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            </div>
+
+            <div class="float-right">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Last Name</label>
+                <input formControlName="last" [class.is-invalid]="
+                lastField.touched && lastField.dirty && lastField.invalid 
+                          " type="text"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            </div>
+        </div>
+
+        <div *ngIf="
+        firstField.touched && firstField.dirty && 
+        firstField.hasError('required') || lastField.touched && lastField.dirty &&
+        lastField.hasError('required')
+                  " class="text-red-500 text-xs italic">
+            Please provide a complete name.
+        </div>
+
+        <div class="mb-3">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+            <input formControlName="username" [class.is-invalid]="
+            usernameField.touched && usernameField.invalid
+                      " type="text"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            <div *ngIf="
+            usernameField.touched && usernameField.dirty && 
+            usernameField.hasError('required')
+                      " class="text-red-500 text-xs italic">
+                Please provide an Username.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+            <input formControlName="password" [class.is-invalid]="
+                        passwordField.touched && passwordField.dirty && passwordField.invalid
+                      " type="password"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            <div *ngIf="
+                        passwordField.touched && passwordField.dirty &&
+                        passwordField.hasError('required')
+                      " class="text-red-500 text-xs italic">
+                Please provide a Password.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
+            <input formControlName="password" [class.is-invalid]="
+                        passwordField.touched && passwordField.dirty && passwordField.invalid
+                      " type="password"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            <div *ngIf="
+                        passwordField.touched && passwordField.dirty &&
+                        passwordField.hasError('required')
+                      " class="text-red-500 text-xs italic">
+                Please provide a Password.
+            </div>
+        </div>
+    </ng-container>
+
+    <div class="flex items-center justify-between">
+        <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit">
+            Sign In
+        </button>
+        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            (click)="openRegister()" *ngIf="!register">
+            Register
+        </a>
+        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            (click)="onClickClose()" href="#">
+            Close
+        </a>
+    </div>
+</form>

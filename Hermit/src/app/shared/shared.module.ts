@@ -1,16 +1,21 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostTypeComponent } from './post-type/post-type.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     PostTypeComponent,
+    ModalComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+
   ], exports: [
-    PostTypeComponent
+    PostTypeComponent,
+    ModalComponent,
   ]
 })
 export class SharedModule { }
- 

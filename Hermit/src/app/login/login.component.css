@@ -8,14 +8,15 @@
     transition: 0.4s;
     background-color: #9ABD9A;
   }
-  
+
   .btn-close:hover {
     background-color: gray;
   }
-   button:hover {
+
+  button:hover {
     color: white;
     background-color: #607660;
-  } 
+  }
 
   .hello {
     border: 5px solid;

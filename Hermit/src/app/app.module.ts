@@ -16,12 +16,12 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
     LoginComponent,
     NavbarComponent,
     PostingsComponent,
-    SidemenuComponent,
+    SidemenuComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
