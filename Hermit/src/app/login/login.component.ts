@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,21 +12,8 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 export class LoginComponent{
   title='bootstrap login';
   loginForm!: FormGroup;
-  constructor(){}
+  public email: string = "";
+  public password: string = "";
 
-  ngOnInit(): void {
-    this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required])
-    })
-  }
-  get emailField(): any {
-    return this.loginForm.get('email');
-  }
-  get passwordField(): any {
-    return this.loginForm.get('password');
-  }
-  loginFormSubmit(): void {
-    console.log(this.loginForm.value);
-  }
+  constructor(private dialog: MatDialog, private router: Router){}
 }

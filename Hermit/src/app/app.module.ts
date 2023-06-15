@@ -10,13 +10,17 @@ import { SharedModule } from './shared/shared.module';
 import {MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    PostingsComponent,
+    PostingsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +28,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SharedModule,
     ReactiveFormsModule,
     MatDialogModule,
-    NgbModule
-  ],
+    NgbModule,
+    MatDialogModule, MatInputModule, MatButtonModule, MatCardModule, MatFormFieldModule]
+  ,
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-  .loginbutton {
+  /* .loginbutton {
     cursor: pointer;
     border: 0;
     border-radius: 4px;
@@ -17,3 +17,6 @@
     color: white;
     background-color: #607660;
   } 
+  .d-block-invalid-feedback {
+    color: red;
+  } */
