@@ -1,8 +1,8 @@
 ::ng-deep * {
-      
-    margin: 0;
-    padding: 0;
-  }
+
+  margin: 0;
+  padding: 0;
+}
 
 p {
   color: white;
@@ -15,4 +15,10 @@ a {
 
 h1 {
   color: white
+}
+
+@media screen and (max-width: 768px) {
+  #post {
+    width: fit-content;
+  }
 }
