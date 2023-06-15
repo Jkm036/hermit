@@ -1,6 +1,6 @@
 #mainmenudiv{
     background-color: #151b3e;
-    height: 0vw;
+    height: 0vh;
     width: 15rem;
     display:flex;
     flex-direction: column;
@@ -8,15 +8,16 @@
 
     position:fixed;
     
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
     transition: height 0.2s;
     padding:0;
     margin:0;
+    
 
 }
 #mainmenudiv.openMenu{
-    height:100vw;
+    height:100vh;
     padding-top:1rem;
     margin-top:3rem;
 }

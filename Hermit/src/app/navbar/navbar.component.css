@@ -100,9 +100,9 @@
     position: absolute;
     top: 110%;
     right: 1%;
-    width: 150px;
-    max-height: 0px;
-    background-color: #202020;
+    width: 20rem;
+    max-height: 0rem;
+    background-color: #151b3e;
     border-radius: 1px;
     flex: 0;
     overflow: hidden;
@@ -110,13 +110,15 @@
 }
 
 .submenu.openmenu {
-    max-height: 250px;
+    max-height: 20rem;
 }
 
 .menuitemlabel {
     font-size: 10px;
 }
-
+.menuitem p{
+    font-size:1rem;
+}
 .menuheader {
     padding-left: 5%;
     font-size: 10px;
@@ -125,14 +127,15 @@
 }
 
 .menuheader p {
-    color: darkgray
+    color: darkgray;
+    font-size:1rem;
 }
 
 .menusection {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #202020;
+    background-color: #151b3e;
 }
 
 .menuitem {
@@ -141,9 +144,10 @@
     position: relative;
     flex-direction: row;
     width: 100%;
-    height: 20px;
+    height: 2rem;
     border-radius: 1px;
     padding-left: 5%;
+    background-color: #151b3e;
 }
 
 .menuitem p,
@@ -154,7 +158,7 @@ svg {
 }
 
 .menuitem:hover {
-    background-color: #303030;
+    background-color: #102d4f;
 }
 
 .menusection hr {
