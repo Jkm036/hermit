@@ -22,3 +22,12 @@ h1 {
     width: fit-content;
   }
 }
+
+#post {
+  height: 100%;
+}
+
+#content {
+  height: calc(100% - 102.5px);
+  overflow-y: hidden;
+}
