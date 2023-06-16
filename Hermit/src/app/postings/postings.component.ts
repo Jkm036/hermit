@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PostingService } from '../services/posting.service';
 
 @Component({
   selector: 'app-postings',
