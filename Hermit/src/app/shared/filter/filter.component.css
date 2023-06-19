@@ -44,3 +44,10 @@ label:hover {
     color: white;
 }
 
+@media screen and (max-width: 768px) {
+    #post {
+      display: none;
+    }
+  }
+
+

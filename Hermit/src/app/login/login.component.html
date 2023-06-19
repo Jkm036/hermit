@@ -27,6 +27,7 @@
 
       <div
         class="inline-block align-bottom bg-secondary rounded-lg text-left overflow-hidden transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        (click)="$event.stopPropagation()"
       >
         <!-- Add margin if you want to see some of the overlay behind the modal-->
         <div class="py-4 text-left px-6">
