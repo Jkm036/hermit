@@ -6,6 +6,10 @@ import {HttpClient} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * This service is responsible for sending and receiving posts.
+ */
 export class PostingService {
 
   constructor(private http:HttpClient) { }

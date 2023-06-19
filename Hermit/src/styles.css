@@ -8,7 +8,7 @@ body {
     justify-content: flex-start;
     width: auto;
     margin: 0 auto;
-    background-color: #10172a;
+    background-color: #10172a; /* From black to pruples */
 }
 
 html,

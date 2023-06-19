@@ -44,8 +44,10 @@ hr {
 
 .menuitem p {
     color: white;
+}
 
-
+.menuitem a {
+    color: white;
 }
 
 .menuitem:hover {

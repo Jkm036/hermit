@@ -8,12 +8,20 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+/**
+ * This component is responsible for showign the login/register form on the page.
+ */
 export class LoginComponent {
 
   showLoginForm: boolean = false;
   constructor() { }
 
   @Input('backgroundcolor') backgroundcolor: String = '#66ff99';
+
+  /**
+   * Toggle to show/hide the component
+   */
   toggle() {
     this.showLoginForm = !this.showLoginForm;
   }

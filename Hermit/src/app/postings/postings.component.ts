@@ -9,6 +9,11 @@ import { Subscription } from 'rxjs';
   templateUrl: './postings.component.html',
   styleUrls: ['./postings.component.css']
 })
+
+/**
+ * This component is responsible for loading the posts and other functionalities of the main 
+ * page ot the application. 
+ */
 export class PostingsComponent {
   posts:Post[]=[];
   private postsSub:Subscription;
@@ -23,9 +28,8 @@ export class PostingsComponent {
     })
     
   }
- toggleModal($event){
-  this.showModal=!this.showModal;
-  $event.stopPropagation();
-  
+  toggleModal($event){
+    this.showModal=!this.showModal;
+    $event.stopPropagation();
  }
 }

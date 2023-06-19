@@ -9,20 +9,11 @@
     background-color: #9ABD9A;
   }
 
-  .btn-close:hover {
-    background-color: gray;
-  }
+.btn-close:hover {
+  background-color: gray;
+}
 
-  button:hover {
-    color: white;
-    background-color: #607660;
-  }
-
-  .hello {
-    border: 5px solid;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-  }
+button:hover {
+  color: white;
+  background-color: #607660;
+}

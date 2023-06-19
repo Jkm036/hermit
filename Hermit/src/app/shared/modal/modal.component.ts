@@ -6,6 +6,10 @@ import { FormControl, Validators, FormGroup } from '@angular/forms';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
+
+/** 
+ * The component for the popup modal that displays the login/register form
+ */
 export class ModalComponent {
   title = 'bootstrap login';
   loginForm!: FormGroup;

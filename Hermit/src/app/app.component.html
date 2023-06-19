@@ -1,18 +1,21 @@
-<navbar (toggleLeftSubMenu)="toggleLSM()" 
-        (toggleCreateCommunity)="toggleCC()" 
-        (toggleSettings)="toggleS()" 
-        (toggleHome)="toggleH()">
+<navbar
+  (toggleLeftSubMenu)="toggleLSM()"
+  (toggleCreateCommunity)="toggleCC()"
+  (toggleSettings)="toggleS()"
+  (toggleHome)="toggleH()"
+>
   <app-login backgroundcolor="#ff33cc"></app-login>
 </navbar>
 
-<sidemenu [sideMenuOpen]="sideMenuOpen" (toggleHome)=" toggleH()"></sidemenu>
+<sidemenu [sideMenuOpen]="sideMenuOpen" (toggleHome)="toggleH()"></sidemenu>
 
 <!--Main content page-->
 <div id="mainContent" class="items-center mt-20 absolute w-full">
-  <span *ngIf="home; then homepage else (createcommunity && createcommunitypage) || (settings && settingspage)"></span>
+  <!-- <span *ngIf="home; then homepage else (createcommunity && createcommunitypage) || (settings && settingspage)"></span> -->
+  <router-outlet></router-outlet>
 </div>
 
-<ng-template #homepage>
+<!-- <ng-template #homepage>
   <app-postings></app-postings>
 </ng-template>
 
@@ -22,4 +25,4 @@
 
 <ng-template #createcommunitypage>
 <app-createcommunity/>
-</ng-template>
+</ng-template> -->

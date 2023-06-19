@@ -13,6 +13,19 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { PostingService } from './services/posting.service';
 import { CreatecommunityComponent } from './createcommnity/createcommnity.component';
 import { PostModalComponent } from './shared/post-modal/post-modal.component';
+import { ErrorComponent } from './error/error.component';
+import { RouterModule, Routes } from '@angular/router';
+
+/**
+ * Configs the routing to the respective components
+ */
+const appRoute: Routes = [
+  {path: '', component: PostingsComponent},
+  {path: 'home', redirectTo: ''},
+  {path: 'community', component: CreatecommunityComponent}, 
+  {path: 'settings', component: SettingsComponent},
+  {path: '**', component: ErrorComponent}
+]
 
 @NgModule({
   declarations: [
@@ -24,12 +37,14 @@ import { PostModalComponent } from './shared/post-modal/post-modal.component';
     CreatecommunityComponent,
     SettingsComponent,
     PostModalComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     SharedModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
