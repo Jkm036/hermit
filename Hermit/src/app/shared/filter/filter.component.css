@@ -12,7 +12,6 @@ input, label {
     border-image-slice: 1;
     border-radius: 1rem;
     border-width: 2px;
-    background-image: linear-gradient(to bottom right, white)
 }
 
 input[type="radio"] {
@@ -21,14 +20,12 @@ input[type="radio"] {
 
 input[type="radio"]:checked + label {
     transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-duration: 75ms;
     background: #DDD;
     background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
     --tw-gradient-from: #a855f7 var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(168 85 247 / 0) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     --tw-gradient-to: #ec4899 var(--tw-gradient-to-position);
     color: white;

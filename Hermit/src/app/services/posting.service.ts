@@ -34,7 +34,7 @@ export class PostingService {
   getPostUpdateListener():Observable<Post[]> {
     return this.postBroadcaster.asObservable();
   }
-  likes = 5
+  likes = 0
   likeFill = 'white'
   dislikeFill = 'white'
   fill = 'white'

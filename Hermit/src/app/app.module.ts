@@ -31,7 +31,7 @@ import { PostModalComponent } from './shared/post-modal/post-modal.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [PostingService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
