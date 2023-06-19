@@ -7,7 +7,13 @@ import { Component ,Input,Output,EventEmitter} from '@angular/core';
 })
 export class SidemenuComponent {
   @Input('sideMenuOpen') sideMenuOpen:boolean=true;
+  @Output('toggleHome') toggleH? = new EventEmitter
   toggleSideMenu(){
     this.sideMenuOpen=!this.sideMenuOpen;
+   }
+   
+  toggleHEvent(){
+    this.toggleH.emit();
+
    }
 }

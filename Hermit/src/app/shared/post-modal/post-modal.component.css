@@ -1,0 +1,18 @@
+.center{
+    background-color:#151b3e;
+    min-width:auto;
+    display:flex;
+    flex-direction:column;
+    height:auto;
+    padding:1rem;
+    width:30rem; 
+    border-radius:5px;
+    border: solid 1px #ff33cc;
+    
+}
+button{
+    background-color: #ff33cc;
+}
+.modalsection p,label{
+    color:white;
+}

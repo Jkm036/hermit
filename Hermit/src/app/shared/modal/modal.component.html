@@ -18,9 +18,9 @@
         </div>
         <div class="mb-3">
             <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-            <input formControlName="password" [class.is-invalid]="
-                        passwordField.touched && passwordField.dirty && passwordField.invalid
-                      " type="password"
+            <input formControlName="password" 
+            [class.is-invalid]="passwordField.touched && passwordField.dirty && passwordField.invalid" 
+                type="password"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
             <div *ngIf="
                         passwordField.touched && passwordField.dirty &&

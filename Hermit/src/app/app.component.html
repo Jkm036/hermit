@@ -1,7 +1,25 @@
-<navbar (toggleLeftSubMenu)="toggleLSM()">
+<navbar (toggleLeftSubMenu)="toggleLSM()" 
+        (toggleCreateCommunity)="toggleCC()" 
+        (toggleSettings)="toggleS()" 
+        (toggleHome)="toggleH()">
   <app-login backgroundcolor="#ff33cc"></app-login>
 </navbar>
-<sidemenu [sideMenuOpen]="sideMenuOpen"></sidemenu>
+
+<sidemenu [sideMenuOpen]="sideMenuOpen" (toggleHome)=" toggleH()"></sidemenu>
+
+<!--Main content page-->
 <div id="mainContent" class="items-center mt-20 absolute w-full">
-  <app-postings></app-postings>
+  <span *ngIf="home; then homepage else (createcommunity && createcommunitypage) || (settings && settingspage)"></span>
 </div>
+
+<ng-template #homepage>
+  <app-postings></app-postings>
+</ng-template>
+
+<ng-template #settingspage>
+  <app-settings/>
+</ng-template>
+
+<ng-template #createcommunitypage>
+<app-createcommunity/>
+</ng-template>

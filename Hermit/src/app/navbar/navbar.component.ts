@@ -9,7 +9,11 @@ import { Component,Output,EventEmitter} from '@angular/core';
   }
 })
 export class NavbarComponent {
-  @Output('toggleLeftSubMenu') toggleLSM = new EventEmitter();
+  @Output('toggleLeftSubMenu')     toggleLSM  = new EventEmitter();
+  @Output('toggleCreateCommunity') toggleCC?  = new EventEmitter();
+  @Output('toggleSettings')        toggleS?   = new EventEmitter();
+  @Output('toggleHome')            toggleH?   = new EventEmitter();
+
  menuOpen:boolean=false;
  
   closeSubMenu(){
@@ -20,8 +24,19 @@ export class NavbarComponent {
   this.menuOpen=!this.menuOpen;
   console.log(this.menuOpen);
  }
+
+ toggleCCEvent(){
+  this.toggleCC.emit();
+ }
+
+ toggleSEvent(){
+  this.toggleS.emit();
+ }
  toggleLeftSubMenu(){
 this.toggleLSM.emit();
+ }
+ toggleHEvent(){
+  this.toggleH.emit();
  }
 
 }

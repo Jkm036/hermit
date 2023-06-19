@@ -1,0 +1,34 @@
+#mainsettingspage{
+padding-left: 20rem;
+height:100vh;
+width:100vw;
+z-index:1;
+display:flex;
+flex-direction: column;
+overflow-y:scroll;
+background-color: rgba(20,20,20,.5);
+
+
+}
+hr{
+width:100%;
+
+
+}
+#mainsettingspage #settingtitle{
+ font-size: 2rem;
+ font-style: bold;
+ color:white;
+}
+.settingsectiontitle{
+    font-size: 1.5rem;
+    font-style: bold;
+    color:white;
+    
+}
+.settingsField{
+    padding-left:2rem;
+}
+.settingsField p{
+   color:white;
+}

@@ -6,7 +6,7 @@
     >
       Create Post with Image
     </button>
-    <button
+    <button (click)="toggleModal($event)"
       class="text-white rounded-full bg-[#bd2f97] p-3 mb-2 transform active:scale-75 transition-transform"
     >
       Create Post with Text
@@ -15,7 +15,52 @@
 
   <app-filter></app-filter>
 
-  <app-post-type>
+
+  <span *ngIf=" posts.length >0; then postsexist else noposts"></span>
+
+  <ng-template #postsexist >
+    <ul>
+      <li *ngFor="let post of posts">
+        <app-post-type username=" {{post.User}}" title="{{post.Title}}" community ="{{post.Community}}">
+           {{post.Content}}
+        </app-post-type>
+      </li>
+
+    </ul>
+  </ng-template>
+
+  <ng-template #noposts>
+    <p style="color: white">Be the first to make a post!</p>
+  </ng-template>
+
+<!-- code for the modal-->
+  <div class="fixed z-50 inset-0" id="modal" [ngClass]="{ hidden: !showModal}" >
+    <div class="bg-gray-900 bg-opacity-60">
+      <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+  
+        <div
+          class="inline-block align-bottom bg-secondary rounded-lg text-left overflow-hidden transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+          <!-- Add margin if you want to see some of the overlay behind the modal-->
+          <div class="py-4 text-left px-6">
+            <!--Title-->
+            <div [hidden]="!showModal" class="bg-white" id="postModal" (click)="$event.stopPropagation()">
+              <div class="modal-body" *ngIf="showModal">
+                <app-post-modal (close)="toggleModal($event)" ></app-post-modal>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+<!--
+    <app-post-type>
     <pre class="whitespace-pre-line w-auto">
       Donec elementum ante fringilla libero vehicula, ut luctus urna dictum.
       Maecenas lobortis ante id sagittis volutpat. Vestibulum molestie felis
@@ -153,4 +198,5 @@
       <img class="mt-2 object-fill" src="https://i.pinimg.com/564x/b5/92/15/b59215b20a2a64c5f47157c872d82be2.jpg" />
     </pre>
   </app-post-type>
+-->
 </div>

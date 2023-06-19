@@ -1,6 +1,7 @@
+import { SettingsComponent } from './settings/settings.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -9,6 +10,9 @@ import { PostingsComponent } from './postings/postings.component';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import { PostingService } from './services/posting.service';
+import { CreatecommunityComponent } from './createcommnity/createcommnity.component';
+import { PostModalComponent } from './shared/post-modal/post-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,18 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
     LoginComponent,
     NavbarComponent,
     PostingsComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    CreatecommunityComponent,
+    SettingsComponent,
+    PostModalComponent,
   ],
   imports: [
     BrowserModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [PostingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
