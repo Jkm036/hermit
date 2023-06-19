@@ -7,10 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-postings',
   templateUrl: './postings.component.html',
-  styleUrls: ['./postings.component.css'],
-  host:{
-    "(window:click)" :  "showModal=false;"
-  }
+  styleUrls: ['./postings.component.css']
 })
 export class PostingsComponent {
   posts:Post[]=[];
