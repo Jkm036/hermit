@@ -60,6 +60,10 @@ hr {
 
 }
 
+.active {
+    background-color: yellow;
+}
+
 .menusectiontitle {
     color: white;
     font-size: 1rem;
