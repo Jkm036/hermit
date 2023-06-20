@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-community',
@@ -10,6 +11,7 @@ export class CommunityComponent {
 
   @Input() name: string = ''
   @Input() tag: string = ''
+  @Input() action: string = 'Join'
 
   /**
    * This constructuor will retrieve the parameters that are being passed to it. 
@@ -35,5 +37,9 @@ export class CommunityComponent {
         this.name = id
       }
     );
+  }
+
+  join() {
+    this.action = this.action === 'Join' ? 'Joined' : 'Join'
   }
 }
