@@ -15,6 +15,7 @@ export class ModalComponent {
   loginForm!: FormGroup;
   register = false
   showLoginForm = false;
+  @Input() action = 'Register';
 
   @Output() closeModal: EventEmitter<void> = new EventEmitter<void>();
 
@@ -52,6 +53,7 @@ export class ModalComponent {
   }
 
   openRegister() {
+    this.action = this.action === 'Register' ? 'Back' : 'Register'
     this.register = !this.register;
   }
 }

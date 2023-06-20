@@ -49,8 +49,8 @@
             </div>
         </div>
 
-        <div class="mb-3">
-            <div class="float-left">
+        <div class="mb-3 max-w-fit">
+            <div class="float-left pr-3">
                 <label class="block text-gray-700 text-sm font-bold mb-2">First Name</label>
                 <input formControlName="first" [class.is-invalid]="
             firstField.touched && firstField.dirty && firstField.invalid
@@ -125,8 +125,8 @@
             Sign In
         </button>
         <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            (click)="openRegister()" *ngIf="!register">
-            Register
+            (click)="openRegister()">
+            {{action}}
         </a>
         <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             (click)="onClickClose()">

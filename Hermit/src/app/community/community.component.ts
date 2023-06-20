@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class CommunityComponent {
 
   @Input() name: string = ''
+  @Input() tag: string = ''
 
   /**
    * This constructuor will retrieve the parameters that are being passed to it. 
