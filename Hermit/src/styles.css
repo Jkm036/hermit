@@ -11,6 +11,10 @@ body {
     background-color: #10172a; /* From black to pruples */
 }
 
+body::-webkit-scrollbar {
+    width: scrollbarwidthpx;
+   }
+
 html,
 body {
     height: 100%;

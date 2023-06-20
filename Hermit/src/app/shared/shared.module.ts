@@ -4,6 +4,7 @@ import { PostTypeComponent } from './post-type/post-type.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
 import { FilterComponent } from './filter/filter.component';
+import { RouterModule } from '@angular/router';
 
 
 /**
@@ -20,11 +21,12 @@ import { FilterComponent } from './filter/filter.component';
   declarations: [
     PostTypeComponent,
     ModalComponent,
-    FilterComponent
+    FilterComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
   ], exports: [
     PostTypeComponent,
     ModalComponent,

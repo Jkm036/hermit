@@ -40,7 +40,7 @@
     </div>
     <!--Title-->
     <div class="flex-col w-full">
-      <h1 class="text-2xl">
+      <h1 class="text-2xl overflow-auto">
         <strong
           ><a href="">{{ title }}</a></strong
         >
@@ -64,7 +64,9 @@
           <p>{{ username }}</p>
         </div>
       </a>
-      <a class="hover:underline" href="">{{ community }}</a>
+      <a [routerLink]="['community']" class="hover:underline">{{
+        community
+      }}</a>
       <hr class="bg-red-800" />
       <a href="">
         <div class="my-3 mr-3 max-h-[100rem] max-w-[120rem]" id="content">
