@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from 'express';
+import { CommunityService } from '../services/community.service';
 
 @Component({
   selector: 'app-community',
@@ -13,30 +14,41 @@ export class CommunityComponent {
   @Input() tag: string = ''
   @Input() action: string = 'Join'
 
-  /**
-   * This constructuor will retrieve the parameters that are being passed to it. 
-   * 
-   * @param router The router link to the component
-   */
-  constructor(private router: ActivatedRoute) {
-    this.name = this.router.snapshot.paramMap.get('name');
-  }
+  // /**
+  //  * This constructuor will retrieve the parameters that are being passed to it. 
+  //  * 
+  //  * @param router The router link to the component
+  //  */
+  // constructor(private router: ActivatedRoute) {
+  //   this.name = this.router.snapshot.paramMap.get('name');
+  // }
+
+  // /**
+  //  * This will update the name parameter whenever the name 
+  //  * changes. 
+  //  * 
+  //  * i.e. when the user clicks on another community, it will update the name. 
+  //  * 
+  //  * Without this, the community will not be updated to the specified community. 
+  //  */
+  // ngOnInit(): void {
+  //   this.router.params.subscribe(
+  //     params => {
+  //       const id = params['name'];
+  //       this.name = id
+  //     }
+  //   );
+  // }
+
+  status: string;
+
+  constructor(private data: CommunityService) { }
 
   /**
-   * This will update the name parameter whenever the name 
-   * changes. 
-   * 
-   * i.e. when the user clicks on another community, it will update the name. 
-   * 
-   * Without this, the community will not be updated to the specified community. 
+   * Updates the name of the community whenever it gets updated. 
    */
-  ngOnInit(): void {
-    this.router.params.subscribe(
-      params => {
-        const id = params['name'];
-        this.name = id
-      }
-    );
+  ngOnInit() {
+    this.data.currentStatus.subscribe(status => this.name = status)
   }
 
   join() {

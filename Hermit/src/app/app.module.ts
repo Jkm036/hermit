@@ -13,14 +13,16 @@ import { PostModalComponent } from './shared/post-modal/post-modal.component';
 import { ErrorComponent } from './error/error.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CommunityComponent } from './community/community.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CommunityService } from './services/community.service';
 
 /**
  * Configs the routing to the respective components
  */
 const appRoute: Routes = [
-  { path: '', component: PostingsComponent },
+  { path: '', component: PostingsComponent, pathMatch: 'full' },
   { path: 'home', redirectTo: '' },
-  { path: 'community', component: CommunityComponent },
+  { path: ':community', component: CommunityComponent },
   { path: 'settings', component: SettingsComponent },
   { path: '**', component: ErrorComponent }
 ]
@@ -42,9 +44,10 @@ const appRoute: Routes = [
     SharedModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AppRoutingModule,
     RouterModule.forRoot(appRoute)
   ],
-  providers: [],
+  providers: [CommunityService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

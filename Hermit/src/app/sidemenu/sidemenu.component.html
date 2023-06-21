@@ -14,8 +14,8 @@
       </div>
     </a>
 
-    <a [routerLink]="['community', {name: 'Popular'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'Popular']">
+      <div class="menuitem" (click)="changeStatus('Popular')">
         <p>Popular</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
@@ -29,8 +29,8 @@
   <div class="menusection">
     <p class="menusectiontitle">Topics</p>
     <hr />
-    <a [routerLink]="['community', {name: 'Programming'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'Programming']">
+      <div class="menuitem" (click)="changeStatus('Programming')">
         <p>Programming</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
@@ -40,8 +40,8 @@
       </div>
     </a>
 
-    <a [routerLink]="['community', {name: 'Gaming'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'Gaming']">
+      <div class="menuitem" (click)="changeStatus('Gaming')">
         <p>Gaming</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
@@ -51,8 +51,8 @@
       </div>
     </a>
 
-    <a [routerLink]="['community', {name: 'Science'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'Science']">
+      <div class="menuitem" (click)="changeStatus('Science')">
         <p>Science</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
@@ -62,8 +62,8 @@
       </div>
     </a>
 
-    <a [routerLink]="['community', {name: 'Music'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'Music']">
+      <div class="menuitem" (click)="changeStatus('Music')">
         <p>Music</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
@@ -75,8 +75,8 @@
       </div>
     </a>
 
-    <a [routerLink]="['community', {name: 'Business'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'Business']">
+      <div class="menuitem" (click)="changeStatus('Business')">
         <p>Business</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
@@ -86,8 +86,8 @@
       </div>
     </a>
 
-    <a [routerLink]="['community', {name: 'Anime'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'Anime']">
+      <div class="menuitem" (click)="changeStatus('Anime')">
         <p>Anime</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
@@ -97,8 +97,8 @@
       </div>
     </a>
 
-    <a [routerLink]="['community', {name: 'World News'}]">
-      <div class="menuitem">
+    <a [routerLink]="['', 'WorldNews']">
+      <div class="menuitem" (click)="changeStatus('World News')">
         <p>World News</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-6 h-6">
