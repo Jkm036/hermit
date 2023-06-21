@@ -6,7 +6,7 @@ module.exports = {
       
     },
     maxWidth: {
-      'test': '43 %'
+      'login': '43%'
     }
   },
   plugins: [],
