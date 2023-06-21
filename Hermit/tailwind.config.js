@@ -3,11 +3,10 @@ module.exports = {
   content: ['./src/**/*.{js,html,ts}'],
   theme: {
     extend: {
-      
+      spacing: {
+        'loginSpacing': '36.3rem',
+      }
     },
-    maxWidth: {
-      'login': '43%'
-    }
   },
   plugins: [],
 }
