@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        'loginSpacing': '36.3rem',
+        'loginSpacing': '31.9rem',
+        'loginName': '12.05rem'
       }
     },
   },
