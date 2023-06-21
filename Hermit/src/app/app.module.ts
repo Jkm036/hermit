@@ -17,13 +17,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommunityService } from './services/community.service';
 
 /**
- * Configs the routing to the respective components
+ * Configs the routing to the respective components. 
+ * 
+ * Make sure to add any new paths above the :community and ** path as those are 
+ * going to match the new routes if put after. 
  */
 const appRoute: Routes = [
   { path: '', component: PostingsComponent, pathMatch: 'full' },
   { path: 'home', redirectTo: '' },
-  { path: ':community', component: CommunityComponent },
   { path: 'settings', component: SettingsComponent },
+  { path: ':community', component: CommunityComponent },
   { path: '**', component: ErrorComponent }
 ]
 

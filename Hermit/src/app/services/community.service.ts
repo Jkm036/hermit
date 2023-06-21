@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+// export interface Guild {
+//   guildName: string;
+//   guildImage: string;
+//   guildIcon: string;
+// }
+
 @Injectable()
 export class CommunityService {
 
