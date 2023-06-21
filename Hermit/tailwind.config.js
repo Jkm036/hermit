@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       
     },
+    maxWidth: {
+      'test': '43 %'
+    }
   },
   plugins: [],
 }
