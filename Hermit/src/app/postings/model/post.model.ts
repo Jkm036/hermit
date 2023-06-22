@@ -3,6 +3,7 @@ interface Post{
     User:string;
     Community:string,
     Content:string,
+    Id?:string,
 }
 
 export default Post;

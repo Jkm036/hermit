@@ -24,6 +24,8 @@
           username=" {{ post.User }}"
           title="{{ post.Title }}"
           community="{{ post.Community }}"
+          id="{{post.Id}}"
+          (onDelete)="onDelete($event)"
         >
           {{ post.Content }}
         </app-post-type>

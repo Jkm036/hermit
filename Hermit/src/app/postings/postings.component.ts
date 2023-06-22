@@ -28,6 +28,9 @@ export class PostingsComponent {
     })
     
   }
+  onDelete(id:string){
+    this.postservice.deletePost(id);
+  }
   toggleModal($event){
     this.showModal=!this.showModal;
     $event.stopPropagation();

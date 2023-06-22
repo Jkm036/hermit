@@ -6,5 +6,5 @@ import { Component,EventEmitter,Output } from '@angular/core';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent {
-
+  
 }
