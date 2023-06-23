@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
 import { FilterComponent } from './filter/filter.component';
 import { RouterModule } from '@angular/router';
+import { CommunityService } from '../services/community.service';
 
 
 /**
@@ -31,6 +32,7 @@ import { RouterModule } from '@angular/router';
     PostTypeComponent,
     ModalComponent,
     FilterComponent
-  ]
+  ], 
+  providers: [CommunityService]
 })
 export class SharedModule { }
