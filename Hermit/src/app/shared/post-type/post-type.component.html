@@ -1,6 +1,6 @@
 <div
   id="post"
-  class="border-s border-pink-400 bg-[#151b3e] h-auto max-h-[25rem] hover:bg-[#151b3e] items-center overflow-y-clip overflow-x-clip top-0 bottom-0 left-0 right-0 m-auto mb-5 mt-2 break-all rounded-lg shadow-2xl"
+  class="border-s border-pink-400 bg-[#151b3e] h-auto w-[42rem] max-h-[25rem] hover:bg-[#151b3e] items-center overflow-y-clip overflow-x-clip top-0 bottom-0 left-0 right-0 m-auto mb-5 mt-2 break-all rounded-lg shadow-2xl"
 >
   <div class="flex flex-row item">
     <div class="flex-col m-3">
@@ -40,11 +40,19 @@
     </div>
     <!--Title-->
     <div class="flex-col w-full">
-      <h1 class="text-2xl overflow-auto">
-        <strong
-          ><a href="">{{ title }}</a></strong
+      <div>
+        <button
+          class="float-right mt-2 mr-2 px-2 py-[0.5] bg-red-400 rounded-full hover:bg-red-600"
+          (click)="delete(Id)"
         >
-      </h1>
+          x
+        </button>
+        <h1 class="text-2xl overflow-auto">
+          <strong
+            ><a href="">{{ title }}</a></strong
+          >
+        </h1>
+      </div>
       <a href="">
         <div class="flex items-center my-1">
           <svg
@@ -72,7 +80,7 @@
       >
       <hr class="bg-red-800" />
       <a href="">
-        <div class="my-3 mr-3 max-h-[100rem] max-w-[120rem]" id="content">
+        <div class="my-3 mr-3 max-h-[100rem] w-full" id="content">
           <p class="whitespace-pre-line">
             <ng-content></ng-content>
           </p>
@@ -80,10 +88,4 @@
       </a>
     </div>
   </div>
-  <button
-    style="background-color: red; border-radius: 2px"
-    (click)="delete(Id)"
-  >
-    Delete
-  </button>
 </div>
