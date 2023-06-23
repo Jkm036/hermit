@@ -3,7 +3,7 @@
   class="border-s border-pink-400 bg-[#151b3e] h-auto w-[42rem] max-h-[25rem] hover:bg-[#151b3e] items-center overflow-y-clip overflow-x-clip top-0 bottom-0 left-0 right-0 m-auto mb-5 mt-2 break-all rounded-lg shadow-2xl"
 >
   <div class="flex flex-row item">
-    <div class="flex-col m-3">
+    <div class="flex-col m-3 pr-1">
       <button (click)="like()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,26 +42,31 @@
     <div class="flex-col w-full">
       <div>
         <button
-          class="float-right mt-2 mr-2 px-2 py-[0.5] bg-white rounded-full hover:bg-red-500"
+          class="float-right mt-[0.7rem] mr-[0.7rem] px-2 py-[0.5] bg-white rounded-full hover:bg-red-500"
           (click)="delete(Id)"
         >
           x
         </button>
-        <h1 class="text-2xl overflow-auto">
+        <h1 class="text-2xl overflow-auto tracking-wider pt-2">
           <strong
             ><a href="">{{ title }}</a></strong
           >
         </h1>
       </div>
-      <a href="">
-        <div class="flex items-center my-1">
+      <p class="text-slate-300">
+        <a [routerLink]="['', community]" (click)="changeStatus(community)">{{
+          community
+        }}</a>
+      </p>
+      <a href="" class="">
+        <div class="flex items-center pb-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="yellow"
-            viewBox="0 0 24 24"
+            fill="none"
+            viewBox="0 0 25 25"
             stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
+            stroke="white"
+            class="w-5 h-5"
           >
             <path
               stroke-linecap="round"
@@ -69,19 +74,13 @@
               d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
             />
           </svg>
-          <p>{{ username }}</p>
+          <p class="text-sm text-slate-300">{{ username }}</p>
         </div>
       </a>
-      <a
-        [routerLink]="['', community]"
-        class="hover:underline"
-        (click)="changeStatus(community)"
-        >{{ community }}</a
-      >
-      <hr class="bg-red-800" />
+      <hr class="w-[38rem]" />
       <a href="">
-        <div class="my-3 mr-3 max-h-[100rem] w-full" id="content">
-          <p class="whitespace-pre-line">
+        <div class="my-3 mr-3 max-h-[100rem] w-[38rem] py-1" id="content">
+          <p class="whitespace-pre-line text-white">
             <ng-content></ng-content>
           </p>
         </div>

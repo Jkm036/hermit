@@ -31,6 +31,6 @@ export class PostModalComponent {
     return this.postform.get('Community');
   }
   postPost(){
-    this.postingservice.addPost(this.TitleField.value, "Josh's biggest fan", this.CommuntiyField.value, this.ContentField.value,);
+    this.postingservice.addPost(this.TitleField.value, "Test Fan", this.CommuntiyField.value, this.ContentField.value,);
   }
 }
