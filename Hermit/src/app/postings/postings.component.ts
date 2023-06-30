@@ -21,6 +21,7 @@ export class PostingsComponent {
   showModal=false;
 
   ngOnInit(){
+
     this.postservice.getPosts();
     this.postsSub=this.postservice.getPostUpdateListener()
     .subscribe((posts:Post[])=>{

@@ -15,7 +15,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommunityComponent } from './community/community.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommunityService } from './services/community.service';
-
+import { PostingService } from './services/posting.service';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 /**
  * Configs the routing to the respective components. 
  * 
@@ -48,9 +49,10 @@ const appRoute: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    MatProgressSpinnerModule,
   ],
-  providers: [CommunityService],
+  providers: [CommunityService, PostingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

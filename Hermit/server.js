@@ -1,5 +1,5 @@
 const http  = require('http');
-const app   = require('./backend/app');
+const app  = require('./backend/app');
 const debug = require("debug")('node-angular');
 
 const normalizePort = (val) =>{
@@ -48,5 +48,5 @@ const onListening=()=>{
 const server =http.createServer(app);
 server.on("error", onError);
 server.on("listening", onListening);
-console.log('Muthii is listening on port:' + port);
+console.log('Herm-Server is listening on port:' + port +"\nwaiting to connect to database...");
 server.listen(port);

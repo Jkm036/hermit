@@ -21,6 +21,6 @@ export class CommunityService {
    * @param status The name of the community 
    */
   changeStatus(status: string) {
-    this.statusSource.next(status)
+    this.statusSource.next(status);
   }
 }

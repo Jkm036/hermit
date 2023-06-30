@@ -4,6 +4,9 @@ interface Post{
     Community:string,
     Content:string,
     Id?:string,
+    isImage:string,
+    PhotoId:string,
+    PhotoPath:string,
 }
 
 export default Post;

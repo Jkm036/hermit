@@ -5,6 +5,8 @@ const postSchema= mongoose.Schema({
     User:     {type:String, required:true},
     Community:{type:String, required:true},
     Content:  {type:String, required:true},   
+    ImageName:{type:String, require:true },
+    isImage:  {type:String, required:true},
 });
 
 

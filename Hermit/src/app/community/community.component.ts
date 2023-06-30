@@ -48,10 +48,10 @@ export class CommunityComponent {
    * Updates the name of the community whenever it gets updated. 
    */
   ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.name = status)
+    this.data.currentStatus.subscribe(status => this.name = status);
   }
 
   join() {
-    this.action = this.action === 'Join' ? 'Joined' : 'Join'
+    this.action = this.action === 'Join' ? 'Joined' : 'Join';
   }
 }

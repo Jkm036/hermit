@@ -15,7 +15,7 @@ export class PostingService {
   constructor(private http:HttpClient) { }
   private posts:Post[]=[];
   private postBroadcaster= new Subject<Post[]>();
-  private  endpoint:string ="http://localhost:3000/api/posts/";
+  private endpoint:string ="http://localhost:3000/api/posts/";
   
   getPosts(){
     this.http.get<{message:String, posts:any[]}>(this.endpoint)
@@ -29,6 +29,11 @@ export class PostingService {
               Community:post.Community,
               Content:post.Content,
               Id:post._id,
+              ImagePath: post.ImagePath,
+              isImage: post.isImage,
+              PhotoId: post.PhotoId,
+              PhotoPath: post.PhotoPath,
+              
             }
         })
       }
@@ -38,14 +43,26 @@ export class PostingService {
       this.postBroadcaster.next([...this.posts]);
     });
   }
-  addPost( Title:string, User:string, Community:string, Content:string, ){
-    let post:Post ={Title:Title, Community:Community, Content:Content, User:User}
+
+  addPost( Title:string, User:string, Community:string, Content:string, Image:File){
+    console.log(Image);
+    const postData = new FormData();
+    postData.append('Title', Title);
+    postData.append('User',User );
+    postData.append('Community', Community);
+    postData.append('Content', Content);
+    if(Image==null){
+      postData.append('Image', 'null');
+    }else{
+      postData.append('Image', Image, Title);
+    }  
+    postData.append('isImage', (!(Image==null)).toString());
     
-    this.http.post<{_id:string}>(this.endpoint, post)
-    .subscribe((responseData)=>{
-      post.Id=responseData._id;
-      this.posts.unshift(post);
-      this.postBroadcaster.next([...this.posts]);
+    this.http.post<Post>(this.endpoint, postData)
+    .subscribe((responseData,)=>{
+        const post:Post ={Title:Title, Community:Community, Content:Content, User:User, Id:responseData.Id, PhotoId:responseData.PhotoId, PhotoPath:responseData.PhotoPath, isImage:responseData.isImage};
+        this.posts.unshift(post);
+        this.postBroadcaster.next([...this.posts]);
     });
     
   }

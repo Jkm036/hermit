@@ -16,3 +16,18 @@ button{
 .modalsection p,label{
     color:white;
 }
+
+input[type="file"]{
+    visibility:hidden;
+}
+a{
+    cursor:pointer;
+}
+.imagepreview{
+    height:5rem;
+    margin:1rem 0;
+
+}
+.imagepreview img{
+    height:100%;
+}
