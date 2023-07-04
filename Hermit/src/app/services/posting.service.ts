@@ -33,7 +33,7 @@ export class PostingService {
               isImage: post.isImage,
               PhotoId: post.PhotoId,
               PhotoPath: post.PhotoPath,
-              
+              DataBase:true,
             }
         })
       }
@@ -44,8 +44,22 @@ export class PostingService {
     });
   }
 
-  addPost( Title:string, User:string, Community:string, Content:string, Image:File){
-    console.log(Image);
+  addPost( Title:string, User:string, Community:string, Content:string, Image:File, imageData:string){
+    let isImage= (Image !=null);
+    const post:Post = {
+      Title:Title,
+      User:User,
+      Community: Community,
+      Content: Content,
+      PhotoId:null,
+      PhotoPath: imageData,
+      isImage: isImage,
+      DataBase: false,
+    } 
+    this.posts.unshift(post);
+    this.postBroadcaster.next([...this.posts]);
+
+    //actual info we will send to databse
     const postData = new FormData();
     postData.append('Title', Title);
     postData.append('User',User );
@@ -57,12 +71,15 @@ export class PostingService {
       postData.append('Image', Image, Title);
     }  
     postData.append('isImage', (!(Image==null)).toString());
-    
+
+
     this.http.post<Post>(this.endpoint, postData)
-    .subscribe((responseData,)=>{
-        const post:Post ={Title:Title, Community:Community, Content:Content, User:User, Id:responseData.Id, PhotoId:responseData.PhotoId, PhotoPath:responseData.PhotoPath, isImage:responseData.isImage};
-        this.posts.unshift(post);
-        this.postBroadcaster.next([...this.posts]);
+    .subscribe((responseData)=>{
+        /*const placeholder    = this.posts[0];
+        placeholder.DataBase = true;
+        placeholder.PhotoId  = responseData.PhotoId;
+        placeholder.PhotoPath= responseData.PhotoPath;*/
+        console.log('Linked newest post to databse');
     });
     
   }

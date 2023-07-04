@@ -11,8 +11,7 @@ export class PostModalComponent {
   @Output('close') close     = new EventEmitter();
  constructor(private postingservice:PostingService){}
  postform:FormGroup;
- imagePreview:string;
- imageData:string=null;
+ imagePreview:string =  null;
   ngOnInit(){
     this.postform= new FormGroup({
       Title:       new FormControl('',[Validators.required]),
@@ -23,6 +22,7 @@ export class PostModalComponent {
   }
  onClose($event){
   this.close.emit($event);
+ 
 
  }
   get TitleField(){
@@ -39,7 +39,7 @@ export class PostModalComponent {
   } 
   //TODO: work on account validation and storage and then display name of accounts 
   postPost(){
-    this.postingservice.addPost(this.TitleField.value, "Josh's biggest fan", this.CommuntiyField.value, this.ContentField.value, this.ImageField.value);
+    this.postingservice.addPost(this.TitleField.value, "Josh's biggest fan", this.CommuntiyField.value, this.ContentField.value, this.ImageField.value, this.imagePreview);
   }
 
   // in the event that someone picked an image to be uploaded

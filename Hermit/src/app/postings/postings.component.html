@@ -24,7 +24,7 @@
   <ng-template #postsexist>
     <ul>
       <li *ngFor="let post of posts">
-        <app-post-type
+        <!--<app-post-type
           username=" {{ post.User }}"
           title="{{ post.Title }}"
           community="{{ post.Community }}"
@@ -35,9 +35,9 @@
         
             {{ post.Content }}
         <div class="postImageContainer">
-            <img [src]="post.PhotoPath" [alt]="post.Title" *ngIf="post.isImage">
+            <img [src]="post.PhotoPath" onload=""  [alt]="post.Title" *ngIf="post.isImage">
         </div>
-        </app-post-type>
+        </app-post-type>-->
       </li>
     </ul>
   </ng-template>

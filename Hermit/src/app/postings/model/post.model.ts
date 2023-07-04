@@ -4,9 +4,10 @@ interface Post{
     Community:string,
     Content:string,
     Id?:string,
-    isImage:string,
+    isImage:boolean,
     PhotoId:string,
     PhotoPath:string,
+    DataBase:boolean,
 }
 
 export default Post;
