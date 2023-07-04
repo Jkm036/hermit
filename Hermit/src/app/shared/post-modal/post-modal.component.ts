@@ -60,4 +60,10 @@ export class PostModalComponent {
     //a format that a
     reader.readAsDataURL(file);
   }
+
+  reload() {
+    setTimeout(()=> {
+      window.location.reload();
+    }, 3500)
+  }
 }
